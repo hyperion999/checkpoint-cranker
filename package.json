@@ -1,0 +1,25 @@
+{
+  "name": "darkmatter-checkpoint-cranker",
+  "version": "1.0.0",
+  "description": "Checkpoint cranker for Dark Matter - automatically checkpoints miners after rounds end",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
+    "@solana/spl-token": "^0.4.0",
+    "@solana/web3.js": "^1.95.0",
+    "bs58": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
