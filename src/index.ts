@@ -12,6 +12,12 @@
  *   POLL_INTERVAL_MS  - Polling interval in ms (default: 5000)
  */
 
+// Polyfill for Node.js < 19 (crypto not globally available)
+import { webcrypto } from 'crypto';
+if (typeof globalThis.crypto === 'undefined') {
+  (globalThis as any).crypto = webcrypto;
+}
+
 import { 
   Connection, 
   Keypair, 
